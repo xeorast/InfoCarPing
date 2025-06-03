@@ -12,7 +12,6 @@ public partial class InfoCarApiClient
 {
 	private readonly InfoCarClientApiOptions _options;
 	private readonly HttpClient _http;
-	private readonly JwtSecurityTokenHandler _jwtHandler;
 	private readonly TokenValidationParameters _jwtValidationParameters;
 	private readonly ICOpenIdConnectClient _oidcClient;
 
@@ -24,7 +23,6 @@ public partial class InfoCarApiClient
 			AllowAutoRedirect = false,
 			CookieContainer = new()
 		} );
-		_jwtHandler = new();
 		_jwtValidationParameters = new()
 		{
 			ValidIssuer = "https://info-car.pl/oauth2/",

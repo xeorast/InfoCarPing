@@ -9,8 +9,9 @@ public class InfoCarClientApiOptions
 	public required string Username { get; set; }
 	public required string Password { get; set; }
 	public required int MaxWaitingTimeInDays { get; set; }
+    public required int WordId { get; set; }
 
-	[JsonConverter( typeof( TimeOnlyJsonConverter ) )]
+    [JsonConverter( typeof( TimeOnlyJsonConverter ) )]
 	public TimeOnly MinExamTime { get; set; } = new( 6, 0 );
 
 	[JsonConverter( typeof( TimeOnlyJsonConverter ) )]

@@ -2,6 +2,7 @@
 	"Category": "B",
 	"Username": "login@gmail.com",
 	"Password": "p@ssw0rd",
+	"WordId": 42,
 	"MaxWaitingTimeInDays": 10,
 	"MinExamTime": "6:00",
 	"MaxExamTime": "21:00"

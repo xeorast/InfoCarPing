@@ -18,7 +18,18 @@ internal class Program
         }
 
         var config = File.ReadAllText("config.json");
-        var options = JsonSerializer.Deserialize<InfoCarClientApiOptions>(config)!;
+        InfoCarClientApiOptions options;
+
+        try
+        {
+            options = JsonSerializer.Deserialize<InfoCarClientApiOptions>(config)!;
+        }
+        catch (Exception e)
+        {
+            PrintException(e);
+            Console.ReadKey();
+            return;
+        }
 
         InfoCarApiClient infoCar = new(options);
 
@@ -39,7 +50,7 @@ internal class Program
             ExamDayDto[] days;
             try
             {
-                days = await infoCar.GetExams(options.Category, 42, options.MaxWaitingTime);
+                days = await infoCar.GetExams(options.Category, options.WordId, options.MaxWaitingTime);
             }
             catch (TransientPingException e)
             {

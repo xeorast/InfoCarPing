@@ -1,10 +1,19 @@
+# Uwaga
+Zgodnie z regulaminem strony info-car.pl obowiązującym od dnia 14.04.2023 r ([archiwum](https://web.archive.org/web/20230605075318/https://info-car.pl/new/assets/i18n/pl.json?v=1.2.8), sekcja TERMS_OF_SERVICE_PAGE):
+> **§6. Usługa Sprawdź dostępność terminów egzaminu na prawo jazdy**
+> 
+> 2. Zabrania się wykorzystywania usługi w celu zautomatyzowanego pobierania danych o wolnych terminach egzaminów na prawo jazdy i prezentowania ich w usługach zewnętrznych niezależnych od Administratora.
+
+W związku z tym kod zawarty w tym repozytorium służy ***wyłącznie do celów edukacyjnych***, a z racji użycia w obecnej wersji strony systemu Cloudflare Turnstile (odmiana CAPTCHA) kod po uruchomieniu wbrew regulaminowi ***nie będzie działał***.
+
+Kod ***może służyć jako baza*** do programów operujących na stronach dopuszczających dostęp botów. Autor nie ponosi odpowiedzialności za ewentualne konsekwencje prób użycia kodu w obecnej formie.
+
 # O aplikacji
 Miejsca na egzamin na termin 2-3 dni do przodu zwalniają się często, nawet kilka dziennie, ale znikają w przeciągu 3-4 minut. 
 
 Apka konsolowa co minutę wykonuje zapytanie do info-car.pl o dostępne terminy egzaminu praktycznego. W przypadku znalezienia wolnego terminu w oczekiwanym zakresie dat pokazuje go w konsoli i informuje brzęczykiem, umożliwiając szybką reakcję i zajęcie terminu. 
 
 ***Apka nie rezerwuje sama miejsc, a jedynie informuje o ich dostępności.*** 
-Dla najlepszego efektu zalecam przygotowanie wcześniej w przeglądarce wypełnionego formularza, by musieć tylko kliknąć datę i przesłać formularz.
 
 # Aby uruchomić:
 
